@@ -16,9 +16,9 @@
         var hdrs = req.requestHeaders;
         var url = req.url;
 
-        for (var i = 0; i < hdrs.length; i++) {
-            var action = getAction(url);
+        var action = getAction(url);
 
+        for (var i = 0; i < hdrs.length; i++) {
             if ('Referer' == hdrs[i].name) {
                 var r = url.match(/^(\w+:\/\/[^\/]+(:\d+)?\/?)/);
                 if (r) {
