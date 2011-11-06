@@ -1,5 +1,5 @@
 (function(){
-    var defaultAction = '_host';
+    var defaultAction = '_hostname';
     var rules = [];
 
     var getAction = function(url) {
