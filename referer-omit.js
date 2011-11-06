@@ -2,6 +2,16 @@
     var defaultAction = '_host';
     var rules = [];
 
+    var getAction = function(url) {
+        for (var i in rules) {
+            if (url.match(rules[i].rule)) {
+                return rules[i].action;
+            }
+        }
+
+        return defaultAction;
+    };
+
     var filter = function(req){
         var hdrs = req.requestHeaders;
 
