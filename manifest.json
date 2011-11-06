@@ -1,0 +1,10 @@
+{
+    "name": "Referer Omit",
+    "version": "0.1",
+    "description": "Replace all referrer to site",
+    "background_page": "background.html",
+    "permissions": [
+        "tabs",
+        "experimental"
+    ]
+}
