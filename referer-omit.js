@@ -1,4 +1,7 @@
 (function(){
+    var defaultRule = '_host';
+    var rules = [];
+
     var filter = function(req){
         var hdrs = req.requestHeaders;
 
