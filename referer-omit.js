@@ -1,5 +1,5 @@
 (function(){
-    var defaultRule = '_host';
+    var defaultAction = '_host';
     var rules = [];
 
     var filter = function(req){
