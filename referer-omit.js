@@ -16,7 +16,9 @@
         var hdrs = req.requestHeaders;
         var url = req.url;
 
-        switch (getAction(url)) {
+        var action = getAction(url);
+
+        switch (action) {
         case '_hostname':
             for (var i = 0; i < hdrs.length; i++) {
                 if ('Referer' == hdrs[i].name) {
@@ -37,7 +39,17 @@
                 }
             }
             break;
+        case '_keep':
+            break;
         default:
+            for (var i = 0; i < hdrs.length; i++) {
+                if ('Referer' == hdrs[i].name) {
+                    hdrs.splice(i, 1);
+                }
+            }
+
+            hdrs.push({name: 'Referer', value: action});
+
             break;
         }
 
