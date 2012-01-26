@@ -1,6 +1,9 @@
 (function(){
     var defaultAction = '_hostname';
-    var rules = [];
+    var rules = [
+        {action: '_remove', rule: /\.rimg\.com\.tw/},
+        {action: 'http://blog.roodo.com/', rule: /\.rimg\.tw/}
+    ];
 
     var getAction = function(url) {
         for (var i in rules) {
