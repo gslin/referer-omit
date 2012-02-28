@@ -5,6 +5,7 @@
     "background_page": "background.html",
     "permissions": [
         "tabs",
+        "webRequest",
         "<all_urls>"
     ]
 }
