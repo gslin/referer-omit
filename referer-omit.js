@@ -61,7 +61,7 @@
 
     chrome.webRequest.onBeforeSendHeaders.addListener(
         filter,
-        {},
+        {urls: ['<all_urls>']},
         ['blocking', 'requestHeaders']
     );
 })();
