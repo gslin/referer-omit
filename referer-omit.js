@@ -59,7 +59,7 @@
         return {requestHeaders: hdrs};
     };
 
-    chrome.experimental.webRequest.onBeforeSendHeaders.addListener(
+    chrome.webRequest.onBeforeSendHeaders.addListener(
         filter,
         {},
         ['blocking', 'requestHeaders']
